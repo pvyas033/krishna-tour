@@ -72,14 +72,11 @@ ul {
 a {
   text-decoration: none;
 }
-img {
+
+img:not(.nav-logo) {
   width: 100%;
   display: block;
 }
-/* img:not(.nav-logo) {
-  width: 100%;
-  display: block;
-} */
 
 h1,
 h2,
@@ -184,6 +181,104 @@ p {
 Navbar
 ===============
 */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--clr-white);
+  box-shadow: var(--dark-shadow);
+  z-index: 2;
+}
+
+.nav-center {
+  width: 100%;
+  max-width: 1117px;
+  margin: 0 auto;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-toggle {
+  background: transparent;
+  border: transparent;
+  font-size: 1.5rem;
+  color: var(--clr-primary-1);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav-toggle:hover {
+  transform: scale(1.2);
+}
+
+.nav-link {
+  display: block;
+  padding: 1rem 2rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+  color: var(--clr-primary-1);
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  color: var(--clr-white);
+  background: var(--clr-primary-5);
+  padding-left: 3rem;
+}
+
+/* 280px */
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transform: var(--transition);
+}
+
+.show-links {
+  height: 280px;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* optional */
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+  }
+  .nav-header {
+    padding: 0 0;
+  }
+  .nav-link {
+    padding: 0 0;
+    margin-right: 1rem;
+    color: var(--clr-primary-1);
+  }
+  .nav-link:hover {
+    padding: 0;
+    color: var(--clr-primary-5);
+    background: transparent;
+  }
+}
+
 /*
 =============== 
 Hero
@@ -602,9 +697,13 @@ Footer
 
 .owner-name:hover {
   color: rgb(253, 253, 253);
-  font-size: 1rem;
+  transform: scale(1.2);
 }
 
 .go-to-top {
   color: white;
+}
+
+.go-to-top:hover {
+  transform: scale(1.5);
 }
