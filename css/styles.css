@@ -558,7 +558,7 @@ Contact
 .contact-form {
   display: flex;
   justify-content: center;
-  max-width: 28rem;
+  max-width: 23rem;
 }
 
 .form-control {
