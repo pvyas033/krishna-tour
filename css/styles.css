@@ -218,6 +218,16 @@ Navbar
   transform: scale(1.2);
 }
 
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: grey;
+}
+
 .nav-link {
   display: block;
   padding: 1rem 2rem;
@@ -547,6 +557,8 @@ Contact
 
 .contact-form {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   max-width: 28rem;
 }
 
